@@ -1,9 +1,13 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   background-color: #18365C;
+  /* min-height: 1069px; */
+  max-width: 1920px;
+  min-height: 1200px;
+  max-height: 2502px;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -40,4 +44,4 @@
 
 button {
   font-size: calc(10px + 2vmin);
-}
+} */

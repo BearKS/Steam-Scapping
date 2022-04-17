@@ -1,7 +1,49 @@
+.title-graph{
+  position: absolute;
+  width: 448px;
+  height: 48px;
+  /* background-color: green; */
+  top: 0px;
+  left: 0px;
+
+  /* haven't import font yet */
+  /* font-family: Inter;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em; */
+  text-align: left;
+  color: #FFFFFF;
+
+  /* FONT PROPERTY FOR NOW!! */
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.updated{
+  position: absolute;
+  width: 312px;
+  height: 22px;
+  top: 54px;
+  left: 1px;
+  color: #FFFFFF;
+  /* background-color: blue; */
+
+  /* haven't import font yet */
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
 .stats-box{
-  width: 90%;
-  height: 250px;
+  position: absolute;
+  width: 578px;
+  height: 340px;
   background-color: #000;
-  margin: 30px;
-  text-align: center;
+  top: 88px;
+  /* text-align: center; */
 }

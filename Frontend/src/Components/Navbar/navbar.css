@@ -5,22 +5,9 @@
   left: 0px;
   top: 0px;
   background: #132845;
+  max-width: 1920px;
 }
-.text-logo{
-  position: absolute;
-  width: 164px;
-  height: 54px;
-  left: 95px;
-  top: 13px;
 
-  font-family: 'Sansation';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 54px;
-  /* identical to box height */
-  color: #FFFFFF;
-}
 .circle{
   position: absolute;
   width: 47px;
@@ -29,5 +16,21 @@
   top: 17px;
   border-radius: 50%;
   background: #C4C4C4;
+}
 
+.text-logo{
+  position: absolute;
+  width: 164px;
+  height: 54px;
+  left: 95px;
+  top: 13px;
+
+  /* haven't import font yet */
+  font-family: 'Sansation';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 54px;
+  /* identical to box height */
+  color: #FFFFFF;
 }

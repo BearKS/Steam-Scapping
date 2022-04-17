@@ -1,0 +1,91 @@
+.title-steamuser{
+    position: absolute;
+    width: 386px;
+    height: 39px;
+    left: 31px;
+    top: 496px;
+    /* background-color: purple; */
+
+    /* haven't import font yet */
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.detail-steamuser{
+    position: absolute;
+    width: 261px;
+    height: 29px;
+    left: 31px;
+    top: 536px;
+    /* background-color: red; */
+
+    /* haven't import font yet */
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #C4C4C4;
+}
+
+.circle1{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    top: 589px;
+    left: 35px;
+    background: #375885;
+}
+
+.circlename1{
+    position: absolute;
+    width: 82px;
+    height: 29px;
+    /* background-color: sienna; */
+    top: 614px;
+    left: 119px;
+
+    /* haven't import font yet */
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.circle2{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    top: 589px;
+    left: 328px;
+    background: #375885;
+}
+
+.circlename2{
+    position: absolute;
+    width: 56px;
+    height: 29px;
+    /* background-color: sienna; */
+    top: 614px;
+    left: 425px;
+
+    /* haven't import font yet */
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}

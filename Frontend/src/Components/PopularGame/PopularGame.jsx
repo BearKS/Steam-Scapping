@@ -5,8 +5,8 @@ import './populargame.css'
 
 export default function PopularGame() {
   return (
-    <div className='pop-game-container'>
-      <div className='title-text'>POPULAR GAMES</div>
+    <div>
+      <div className='title-popgame'>POPULAR GAMES</div>
       <div className='pop-game-box'>
         <button className='butt'>All</button>
         <button className='butt'>RPG</button>

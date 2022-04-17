@@ -1,7 +1,22 @@
-.pop-game-container {
-  /* position: relative; */
-  /* background-color: aqua; */
+.title-popgame{
+  width: 339px;
+  height: 39px;
+  top: 0px;
+  left: 0px;
+  background-color: antiquewhite;
 
+  /* haven't import font yet */
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+
+  /* FONT PROPERTY FOR NOW!! */
+  font-size: xx-large;
+  font-weight: 700;
 }
 .pop-game-box {
   width: 90%;
