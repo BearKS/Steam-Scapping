@@ -27,8 +27,11 @@
 }
 
 .column2 {
+  position: absolute;
   width: 1200px;
   min-height: 888px;
+  top: 0px;
+  right: 0px;
   
   /* float: right; */
   /* width: 70%; */

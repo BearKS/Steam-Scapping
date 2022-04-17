@@ -18,37 +18,99 @@
   font-size: xx-large;
   font-weight: 700;
 }
+
 .pop-game-box {
-  width: 90%;
-  height: 250px;
-  /* background-color: #000; */
-  margin: 30px;
+  position: absolute;
+  width: 1000px;
+  height: 90.17px;
+  top: 67px;
+  left: 0px;
   display: block;
+  background-color: plum;
 }
+
 .butt {
-  /* position: absolute; */
-  width: 150px;
-  height: 70.17px;
+  position: relative;
+  width: 200px;
+  height: 90.17px;
   background: #32415a;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px 15px 0px 0px;
-  float: left;
   color:#C9C9C9 ;
-  transform: translateY(-30%);
+
+  /* haven't import font yet */
+  font-family: Raleway;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
 }
+
 .butt:hover {
   background: #C9C9C9;
   color: #32415a;
+  cursor: pointer;
 }
+
 .pop-game-box-show {
   position: absolute;
-  width: 60%;
-  /* height: 644.83px; */
-  /* left: 526px; */
-  top: 223.17px;
+  width: 1200px;
+  height: 716.83px;
 
-  background: #dfdfdf;
+  background-color: #dfdfdf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 20px 20px 20px;
-  padding: 20px;
+}
+
+.pgbs-container{
+  position: absolute;
+  background-color: yellowgreen;
+  width: 1153px;
+  min-height: 632px;
+  margin-top: 34.94px;
+  margin-left: 23px;
+  margin-bottom: 41.89px;
+  margin-right: 24px;
+}
+
+.bbb1{
+  position: absolute;
+  top: 192.11px;
+  right: 0px;
+  height: 120px;
+  width: 50px;
+  background-color: plum;
+}
+.bbb2{
+  position: absolute;
+  top: 320.11px;
+  right: 0px;
+  height: 120px;
+  width: 50px;
+  background-color: plum;
+}
+.bbb3{
+  position: absolute;
+  top: 448.11px;
+  right: 0px;
+  height: 120px;
+  width: 50px;
+  background-color: plum;
+}
+.bbb4{
+  position: absolute;
+  top: 576.11px;
+  right: 0px;
+  height: 120px;
+  width: 50px;
+  background-color: plum;
+}
+.bbb5{
+  position: absolute;
+  top: 704.11px;
+  right: 0px;
+  height: 120px;
+  width: 50px;
+  background-color: plum;
 }

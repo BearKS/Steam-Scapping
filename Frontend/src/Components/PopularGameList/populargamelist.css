@@ -1,83 +1,95 @@
 .game-list-container {
   position: relative;
-
+  width: 1153px;
+  height: 120px;
+  margin-bottom: 8px;
+  background-color: cornflowerblue;
 }
 
 .game-list-box {
-  /* position: absolute; */
+  position: absolute;
   left: 0%;
   right: 0%;
   top: 0%;
   bottom: 0%;
-
   background: #c5c5c5;
   border-radius: 15px;
-
-}
-.col1 {
-  float: left;
-  width: 10%;
-  top: 0%;
-  /* height: 500px; */
-
-  /* background-color: white; */
-}
-.col2 {
-  float: left;
-  width: 30%;
-  top: 0%;
-  /* height: 500px; */
-  /* background-color: rgb(207, 173, 173); */
-}
-.col3 {
-  float: left;
-  width: 10%;
-  top: 0%;
-  left: 0%;
-  /* height: 500px; */
-  /* background-color: rgb(90, 63, 63); */
 }
 
-
-/* Clear floats after the columns */
 .roww {
-  content: "";
-  display: table;
-  clear: both;
-  min-width: 90vw;
-  /* min-height: 100vw; */
-
-  position: relative;
-  /* top: 5rem; */
-  padding: 1%;
-  padding-left: 0%;
-  margin-bottom: 1%;
-  /* padding-top: 7rem; */
-  /* left: 1.5%; */
-  /* background-color: aquamarine; */
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* transform: translateY(0%); */
- 
-  /* transform: translateX(3.5%); */
-
-  /* transform: translate(2%, -0%); */
-
+  position: absolute;
+  top: 13.51px;
+  left: 14px;
+  bottom: 14.49px;
+  width: 844px;
+  height: 92px;
+  
+  display: grid;
+  grid-template-columns: 183px 567px 94px;
+  /* grid-template-columns: 183px 567px 42px 52px; */
+  background-color: aquamarine;
+  /* content: "";
+  clear: both; */
 }
+
+.col1 {
+  /* width: 160px;
+  height: 92px; */
+  background-color: white;
+}
+
 .img-game{
-  /* position: absolute; */
+  position: absolute;
   object-fit: cover;
   border-radius: 10px;
-  height: 65px;
+  width: 160px;
+  height: 92px;
 }
+
+.col2 {
+  /* width: 523px;
+  height: 92px; */
+  background-color: rgb(207, 173, 173);
+}
+
+.name-col2{
+  position: absolute;
+  width: 523px;
+  height: 40.73px;
+  margin-top: 16.51px;
+  margin-bottom: 62.75px;
+  background-color: #808080;
+}
+
 .game-name{
-  text-align: left;
-  width: 90%;
-  background: #808080;
-  /* margin: 10px; */
-  /* margin-left: auto;
-  margin-right: auto; */
-  padding: 5px;
+  width: 71px;
+  height: 31.93px;
+  background-color: coral;
+  margin-top: 5.5px;
+  margin-bottom: 3.3px;
+  margin-left: 10px;
+
+  /*haven't import yet*/
+  font-family: Inter;
+  font-size: 24px;
   font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
   color: white;
+}
+
+.tag-col2{
+  position: relative;
+  width: 268px;
+  height: 28px;
+  background-color: violet;
+  /* bottom: 16.83px; */
+  margin-top: 60px;
+}
+
+.col3 {
+  width: 26px;/*star*/
+  height: 92px;
+  background-color: rgb(90, 63, 63);
 }

@@ -14,13 +14,20 @@ export default function PopularGame() {
         <button className='butt'>Action</button>
         <button className='butt'>...</button>
         <div className='pop-game-box-show'>
-          <PopularGameList />
-          <PopularGameList />
-          <PopularGameList />
-          <PopularGameList />
-          <PopularGameList />
+          <div className='pgbs-container'>
+            <PopularGameList />
+            <PopularGameList />
+            <PopularGameList />
+            <PopularGameList />
+            <PopularGameList />
+          </div>
         </div>
       </div>
+        <div className='bbb1'></div>
+        <div className='bbb2'></div>
+        <div className='bbb3'></div>
+        <div className='bbb4'></div>
+        <div className='bbb5'></div>
     </div>
   );
 };
