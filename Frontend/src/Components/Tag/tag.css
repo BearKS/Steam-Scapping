@@ -1,11 +1,27 @@
 .tag-container{
     width: 61px;
     height: 28px;
-    background-color: aqua;
+    background: #FEB29A;
     position: relative;
-    margin-right: 10px;
+    margin-right: 8px;
+    border-radius: 16px;
 }
 
 .tag-name{
- color: white;
+    position: relative;
+    color: #344054;
+    width: 37px;
+    height: 20px;
+    /* background-color: antiquewhite; */
+    top: 4px;
+    left: 12px;
+
+    /*haven't import yet*/
+    /*styleName: Text sm/Medium;*/
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
 }

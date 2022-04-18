@@ -15,7 +15,7 @@
   max-width: 1920px;
   min-height: 989px;
 
-  background-color: pink;
+  /* background-color: pink; */
   /* content: ""; */
   /* clear: both; */
 }
@@ -23,7 +23,7 @@
 .column1 {
   width: 578px;
   min-height: 888px;
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .column2 {
@@ -37,5 +37,5 @@
   /* width: 70%; */
   /* top: 0%; */
   /* height: 500px; */
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }

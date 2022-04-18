@@ -3,7 +3,7 @@
   height: 39px;
   top: 0px;
   left: 0px;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 
   /* haven't import font yet */
   font-family: Raleway;
@@ -26,7 +26,7 @@
   top: 67px;
   left: 0px;
   display: block;
-  background-color: plum;
+  /* background-color: plum; */
 }
 
 .butt {
@@ -65,7 +65,7 @@
 
 .pgbs-container{
   position: absolute;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   width: 1153px;
   min-height: 632px;
   margin-top: 34.94px;
@@ -76,41 +76,41 @@
 
 .bbb1{
   position: absolute;
-  top: 267.28px;
-  left: 220px;
-  width: 61px;
-  height: 28px;
+  top: 271.28px;
+  left: 232px;
+  width: 37px;
+  height: 20px;
   background-color: gray;
 }
 .bbb2{
   position: absolute;
-  top: 267.28px;
-  left: 220px;
-  width: 61px;
-  height: 28px;
+  top: 271.28px;
+  left: 232px;
+  width: 37px;
+  height: 20px;
   background-color: gray;
 }
 .bbb3{
   position: absolute;
-  top: 267.28px;
-  left: 289px;
-  width: 61px;
-  height: 28px;
+  top: 271.28px;
+  left: 301px;
+  width: 37px;
+  height: 20px;
   background-color: gray;
 }
 .bbb4{
   position: absolute;
-  top: 267.28px;
-  left: 358px;
-  width: 61px;
-  height: 28px;
+  top: 271.28px;
+  left: 370px;
+  width: 37px;
+  height: 20px;
   background-color: gray;
 }
 .bbb5{
   position: absolute;
-  top: 267.28px;
-  left: 427px;
-  width: 61px;
-  height: 28px;
+  top: 271.28px;
+  left: 439px;
+  width: 37px;
+  height: 20px;
   background-color: gray;
 }

@@ -5,7 +5,7 @@ export default function Tag(){
     return (
         <div>
             <div className='tag-container'>
-                <div className='tag-name'>tag</div>
+                <div className='tag-name'>Label</div>
             </div>
         </div>
     );

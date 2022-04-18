@@ -5,7 +5,8 @@
   left: 0px;
   top: 0px;
   background: #132845;
-  max-width: 1920px;
+  /* max-width: 1920px; */
+  max-width: 100%;
 }
 
 .circle{
