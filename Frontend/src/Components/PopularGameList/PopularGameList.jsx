@@ -1,5 +1,6 @@
 import React from 'react'
 import './populargamelist.css'
+import Tag from '../../Components/Tag/Tag'
 
 export default function PopularGameList() {
   return (
@@ -16,7 +17,10 @@ export default function PopularGameList() {
             </div>
 
             <div className='tag-col2'>
-              
+              <Tag />
+              <Tag />
+              <Tag />
+              <Tag />
             </div>
           </div>
 

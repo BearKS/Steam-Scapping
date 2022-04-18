@@ -23,11 +23,11 @@ export default function PopularGame() {
           </div>
         </div>
       </div>
-        <div className='bbb1'></div>
+        {/* <div className='bbb1'></div>
         <div className='bbb2'></div>
         <div className='bbb3'></div>
         <div className='bbb4'></div>
-        <div className='bbb5'></div>
+        <div className='bbb5'></div> */}
     </div>
   );
 };

@@ -1,0 +1,11 @@
+.tag-container{
+    width: 61px;
+    height: 28px;
+    background-color: aqua;
+    position: relative;
+    margin-right: 10px;
+}
+
+.tag-name{
+ color: white;
+}
