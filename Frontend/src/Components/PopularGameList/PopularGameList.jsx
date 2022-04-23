@@ -1,6 +1,7 @@
 import React from 'react'
 import './populargamelist.css'
 import Tag from '../../Components/Tag/Tag'
+import star from '../../star-full.svg';
 
 export default function PopularGameList() {
   return (
@@ -25,6 +26,9 @@ export default function PopularGameList() {
           </div>
 
           <div className='col3' />
+            <img className='rating-pic' src={star}></img>
+            <div className='rating-input'>4.8</div>
+            <div className='rating-fullpoint'>/5</div>
 
         </div>
       </div>

@@ -1,3 +1,8 @@
+@font-face{
+  font-family: 'Inter';
+  src: url(../../Fonts/Inter/otf/Inter-Regular.otf) format('truetype');
+}
+
 .title-graph{
   position: absolute;
   width: 448px;
@@ -6,18 +11,14 @@
   top: 0px;
   left: 0px;
 
-  /* haven't import font yet */
-  /* font-family: Inter;
+  font-family: 'Inter';
+  font-style: normal;
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: 0em; */
+  letter-spacing: 0em;
   text-align: left;
   color: #FFFFFF;
-
-  /* FONT PROPERTY FOR NOW!! */
-  font-size: xx-large;
-  font-weight: 700;
 }
 
 .updated{
@@ -29,8 +30,8 @@
   color: #FFFFFF;
   /* background-color: blue; */
 
-  /* haven't import font yet */
-  font-family: Inter;
+  font-family: 'Inter';
+  font-style: normal;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;

@@ -19,6 +19,13 @@
   background: #C4C4C4;
 }
 
+@font-face{
+  font-family: 'Sansation';
+  src: url(../../Fonts/Sansation/Sansation-Regular/Sansation-Regular.otf) format('truetype'),
+    url(../../Fonts/Sansation/Sansation-Regular/Sansation-Regular.woff) format('woff'),
+    url(../../Fonts/Sansation/Sansation-Regular/Sansation-Regular.woff2) format('woff2');
+}
+
 .text-logo{
   position: absolute;
   width: 164px;
@@ -26,7 +33,6 @@
   left: 95px;
   top: 13px;
 
-  /* haven't import font yet */
   font-family: 'Sansation';
   font-style: normal;
   font-weight: 700;

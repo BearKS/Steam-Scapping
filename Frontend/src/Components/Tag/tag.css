@@ -7,6 +7,11 @@
     border-radius: 16px;
 }
 
+@font-face{
+    font-family: 'Inter';
+    src: url(../../Fonts/Inter/otf/Inter-Regular.otf) format('truetype');
+}
+
 .tag-name{
     position: relative;
     color: #344054;
@@ -16,9 +21,8 @@
     top: 4px;
     left: 12px;
 
-    /*haven't import yet*/
-    /*styleName: Text sm/Medium;*/
-    font-family: Inter;
+    font-family: 'Inter';
+    font-style: normal;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;

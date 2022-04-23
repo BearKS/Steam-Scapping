@@ -2,34 +2,42 @@
   position: relative;
   max-width: 1920px;
   height: auto;
+  background-color: #18365C;
+  /* background-color: #18365C;
+  width: 100vw;
+  min-height: 100vh; */
 }
 
-/* Clear floats after the columns */
 .row {
   position: absolute;
   top: 136px;
-  left: 64px;
+  left: 3%;
   
   display: grid;
-  grid-template-columns: 622px 1200px; 
+  /* grid-template-columns: 622px 1200px;  */
+  grid-template-columns: 32% 63%; 
   max-width: 1920px;
   min-height: 989px;
 
   /* background-color: pink; */
-  /* content: ""; */
-  /* clear: both; */
 }
 
 .column1 {
-  width: 578px;
+  display: block;
+  /* width: 800px; */
+  width: 622px;
   min-height: 888px;
   /* background-color: gray; */
+  max-height: fit-content;
 }
 
 .column2 {
-  position: absolute;
-  width: 1200px;
+  /* position: absolute; */
+  /* width: 1200px; */
+  display: block;
+  width: 1300px;
   min-height: 888px;
+  max-height: fit-content;
   top: 0px;
   right: 0px;
   
