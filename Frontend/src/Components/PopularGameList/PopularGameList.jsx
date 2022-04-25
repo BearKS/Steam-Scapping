@@ -4,6 +4,12 @@ import Tag from '../../Components/Tag/Tag'
 import star from '../../star-full.svg';
 
 export default function PopularGameList() {
+
+  // const { product } = props;
+
+  {/* <div key={product._id} className='game-list-container'></div> */}
+     // <div href={`/$(product._id)`}></div>
+
   return (
     <div className='game-list-container '>
       <div className='game-list-box rounded-lg hover:border-[3px] border-amber-400 cursor-grab'>
@@ -33,5 +39,6 @@ export default function PopularGameList() {
         </div>
       </div>
     </div>
+    
   );
 };
