@@ -10,10 +10,10 @@ export default function PopularGame() {
 
       <div className='pop-game-box'>
 
-        <input type="radio" id="tabAll" name='pop-game-box' checked="checked"></input>
+        <input type="radio" id="tabAll" name='pop-game-box' defaultChecked="checked"></input>
         <label for="tabAll">All</label>
         <div class="tab">
-          <h2>this is on All tab!!</h2>
+          {/* <h2>this is on All tab!!</h2> */}
           <div className='pgbs-container'> 
             <PopularGameList /><PopularGameList />
             <PopularGameList /><PopularGameList /><PopularGameList />

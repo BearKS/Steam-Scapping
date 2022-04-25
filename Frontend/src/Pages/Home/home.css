@@ -11,13 +11,16 @@
 .row {
   position: absolute;
   top: 136px;
-  left: 3%;
+  /* left: 3%; */
+  left: 6%;
   
   display: grid;
   /* grid-template-columns: 622px 1200px;  */
-  grid-template-columns: 32% 63%; 
+  /* grid-template-columns: 32% 63%;  */
+  grid-template-columns: 35% 63%;
   max-width: 1920px;
-  min-height: 989px;
+  /* min-height: 989px; */
+  min-height: 900px;
 
   /* background-color: pink; */
 }
