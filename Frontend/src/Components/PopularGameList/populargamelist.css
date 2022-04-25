@@ -18,7 +18,7 @@
   top: 0%;
   bottom: 0%;
   background: #c5c5c5;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .roww {
@@ -105,7 +105,7 @@
 
 .rating-pic {
   position: absolute;
-  height: 26px;
+  height: 40px;
   padding-left: 750px;
   padding-top: 13px;
   /* color: #F2AC57; */

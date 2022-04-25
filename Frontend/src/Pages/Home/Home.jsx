@@ -7,15 +7,15 @@ import './home.css'
 
 export default function Home() {
   return (
-    <div className='home-container'>
-      <div class="row">
+    <div className='pt-20 h-screen'>
+      <div className="flex px-10 py-5 bg-[#18365C] justify-between ">
 
-        <div class="column1" >
+        <div className="flex flex-col pr-10 gap-5 w-1/3" >
           <GameStats />
           <SteamUser />
         </div>
 
-        <div class="column2">
+        <div class="">
           <PopularGame />
         </div>
 

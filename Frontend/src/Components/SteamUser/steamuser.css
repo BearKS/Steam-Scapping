@@ -4,7 +4,7 @@
   }
 
 .title-steamuser{
-    position: absolute;
+    /* position: absolute; */
     width: 386px;
     height: 39px;
     left: 31px;
@@ -22,7 +22,7 @@
 }
 
 .detail-steamuser{
-    position: absolute;
+    /* position: absolute; */
     width: 265px;
     height: 29px;
     left: 31px;
@@ -40,7 +40,7 @@
 }
 
 .circle1{
-    position: absolute;
+    /* position: absolute; */
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -50,7 +50,7 @@
 }
 
 .circlename1{
-    position: absolute;
+    /* position: absolute; */
     width: 82px;
     height: 29px;
     /* background-color: sienna; */
@@ -68,7 +68,7 @@
 }
 
 .current-users{
-    position: absolute;
+    /* position: absolute; */
     width: 235px;
     height: 40px;
     /* background-color: sienna; */
@@ -86,7 +86,7 @@
 }
 
 .circle2{
-    position: absolute;
+    /* position: absolute; */
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -96,7 +96,7 @@
 }
 
 .circlename2{
-    position: absolute;
+    /* position: absolute; */
     width: 56px;
     height: 29px;
     /* background-color: sienna; */
@@ -114,7 +114,7 @@
 }
 
 .peak-users{
-    position: absolute;
+    /* position: absolute; */
     width: 235px;
     height: 40px;
     /* background-color: sienna; */

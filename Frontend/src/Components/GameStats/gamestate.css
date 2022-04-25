@@ -4,7 +4,7 @@
 }
 
 .title-graph{
-  position: absolute;
+  /* position: absolute; */
   width: 448px;
   height: 48px;
   /* background-color: green; */
@@ -22,7 +22,7 @@
 }
 
 .updated{
-  position: absolute;
+  /* position: absolute; */
   width: 312px;
   height: 22px;
   top: 54px;
@@ -41,7 +41,7 @@
 }
 
 .stats-box{
-  position: absolute;
+  /* position: absolute; */
   width: 578px;
   height: 340px;
   background-color: #000;

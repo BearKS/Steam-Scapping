@@ -1,5 +1,5 @@
 .home-container {
-  position: relative;
+  /* position: relative; */
   max-width: 1920px;
   height: auto;
   background-color: #18365C;
@@ -9,7 +9,7 @@
 }
 
 .row {
-  position: absolute;
+  /* position: absolute; */
   top: 136px;
   /* left: 3%; */
   left: 6%;
@@ -22,7 +22,7 @@
   /* min-height: 989px; */
   min-height: 900px;
 
-  /* background-color: pink; */
+  background-color: pink;
 }
 
 .column1 {
@@ -30,7 +30,7 @@
   /* width: 800px; */
   width: 622px;
   min-height: 888px;
-  /* background-color: gray; */
+  background-color: gray;
   max-height: fit-content;
 }
 
@@ -48,5 +48,5 @@
   /* width: 70%; */
   /* top: 0%; */
   /* height: 500px; */
-  /* background-color: aquamarine; */
+  background-color: aquamarine;
 }

@@ -5,8 +5,8 @@ import star from '../../star-full.svg';
 
 export default function PopularGameList() {
   return (
-    <div className='game-list-container'>
-      <div className='game-list-box'>
+    <div className='game-list-container '>
+      <div className='game-list-box rounded-lg hover:border-[3px] border-amber-400 cursor-grab'>
         <div className='roww'>
           <div className='col1'>
             <img className='img-game' src="https://www.looper.com/img/gallery/every-mario-game-on-nintendo-switch-ranked-worst-to-best/l-intro-1631623336.jpg" />
