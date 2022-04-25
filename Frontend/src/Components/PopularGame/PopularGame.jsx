@@ -25,7 +25,7 @@ export default function PopularGame() {
         <input type="radio" id="tabRPG" name='pop-game-box'></input>
         <label for="tabRPG">RPG</label>
         <div class="tab">
-          <h2>this is on RPG tab!!</h2>
+          {/* <h2>this is on RPG tab!!</h2> */}
           <div className='pgbs-container'>
             <PopularGameList /><PopularGameList />
             <PopularGameList /><PopularGameList /><PopularGameList />
@@ -37,7 +37,7 @@ export default function PopularGame() {
         <input type="radio" id="tabMOBA" name='pop-game-box'></input>
         <label for="tabMOBA">MOBA</label>
         <div class="tab">
-          <h2>this is on MOBA tab!!</h2>
+          {/* <h2>this is on MOBA tab!!</h2> */}
           <div className='pgbs-container'>
             <PopularGameList /><PopularGameList />
             <PopularGameList /><PopularGameList /><PopularGameList />
@@ -49,7 +49,7 @@ export default function PopularGame() {
         <input type="radio" id="tabAction" name='pop-game-box'></input>
         <label for="tabAction">Action</label>
         <div class="tab">
-          <h2>this is on Action tab!!</h2>
+          {/* <h2>this is on Action tab!!</h2> */}
           <div className='pgbs-container'>
             <PopularGameList /><PopularGameList />
             <PopularGameList /><PopularGameList /><PopularGameList />
@@ -61,7 +61,7 @@ export default function PopularGame() {
         <input type="radio" id="tab..." name='pop-game-box'></input>
         <label for="tab...">...</label>
         <div class="tab">
-          <h2>this is on ... tab!!</h2>
+          {/* <h2>this is on ... tab!!</h2> */}
           <div className='pgbs-container'>
             <PopularGameList /><PopularGameList />
             <PopularGameList /><PopularGameList /><PopularGameList />

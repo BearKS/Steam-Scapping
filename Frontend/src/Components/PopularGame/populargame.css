@@ -70,6 +70,7 @@
   
   order: 1;
   display: none;
+
   overflow: scroll;
   overflow-wrap: inherit;
   -webkit-box-orient: vertical;
@@ -108,7 +109,7 @@
   height: 31px;
   /* left: 1727px; */
   top: 830px;
-  left: 1041px;
+  left: 88%;
 
   font-family: 'Inter';
   font-style: normal;
