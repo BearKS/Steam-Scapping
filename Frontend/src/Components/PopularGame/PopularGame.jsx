@@ -4,6 +4,45 @@ import './populargame.css'
 
 
 export default function PopularGame() {
+
+  // const [Data, DataSet] = useState([]);
+  // const [List, setList] = useState([{
+  //   _id: "",
+  //   name: "",
+  //   image_url: "",
+  //   price: "",
+  //   review: "",
+  //   brand_info: "",
+  // }]);
+
+  // useEffect(() => {
+  //   async function fetchMyAPI() {
+  //     let res = await fetch(URL);
+  //     res = await res.json();
+
+  //     console.log('hello')
+  //     console.log(JSON.stringify(res))
+
+  //     const shList = List;
+
+  //     for (let i=0;i<res.length;i++){
+  //       shList[i] = {
+  //         _id: res[i]._id,
+  //         name: res[i].name,
+  //         image_url: res[i].image_url,
+  //         price: res[i].price,
+  //         review: res[i].review,
+  //         brand_info: res[i].brand_info,
+  //       };
+  //     }
+  //     console.log('shList' + shList)
+  //     setList(shList);
+  //     DataSet(JSON.stringify(res));
+  //   }
+  //   fetchMyAPI();
+  // }, []);
+
+
   return (
     <div>
       <div className='title-popgame'>POPULAR GAMES</div> 
@@ -69,6 +108,14 @@ export default function PopularGame() {
             <PopularGameList /><PopularGameList /><PopularGameList />
           </div>
         </div>
+
+
+        {/* <div>
+          {List.map((product) => (
+            <PopularGameList key={product._id} product={product}></PopularGameList>
+          ))}
+        </div> */}
+
       </div>
 
       {/* <div className='sh-more'>Show more</div> */}
