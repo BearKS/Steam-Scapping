@@ -2,16 +2,15 @@ import React from "react";
 import PopularGameList from "../PopularGameList/PopularGameList";
 import "./populargame.css";
 
+const URL = `https://cc-mock-api.herokuapp.com`;
+
 export default function PopularGame() {
 
   // const [Data, DataSet] = useState([]);
   // const [List, setList] = useState([{
   //   _id: "",
   //   name: "",
-  //   image_url: "",
-  //   price: "",
-  //   review: "",
-  //   brand_info: "",
+  //   gameData: "",
   // }]);
 
   // useEffect(() => {
@@ -28,10 +27,7 @@ export default function PopularGame() {
   //       shList[i] = {
   //         _id: res[i]._id,
   //         name: res[i].name,
-  //         image_url: res[i].image_url,
-  //         price: res[i].price,
-  //         review: res[i].review,
-  //         brand_info: res[i].brand_info,
+  //         gameData: res[i].gameData,
   //       };
   //     }
   //     console.log('shList' + shList)
@@ -54,6 +50,9 @@ export default function PopularGame() {
         <div class="tab">
           {/* <h2>this is on All tab!!</h2> */}
           <div className="pgbs-container">
+            {/* {List.map((game) => (
+              <PopularGameList key={game._id} game={game}></PopularGameList>
+            ))} */}
             <PopularGameList />
             <PopularGameList />
             <PopularGameList />

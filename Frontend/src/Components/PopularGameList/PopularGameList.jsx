@@ -4,11 +4,11 @@ import Tag from '../../Components/Tag/Tag'
 import star from '../../star-full.svg';
 
 export default function PopularGameList() {
+// export default function PopularGameList(props) {
+  // const { game } = props;
 
-  // const { product } = props;
-
-  {/* <div key={product._id} className='game-list-container'></div> */}
-     // <div href={`/$(product._id)`}></div>
+  {/* <div key={game._id} className='game-list-container'></div> */}
+     // <div href={`/$(game??._id)`}></div>
 
   return (
     <div className='game-list-container '>
