@@ -47,12 +47,7 @@ export default function PopularGame() {
       <div className="title-popgame">POPULAR GAMES</div>
 
       <div className="pop-game-box">
-        <input
-          type="radio"
-          id="tabAll"
-          name="pop-game-box"
-          defaultChecked="checked"
-        ></input>
+        <input type="radio" id="tabAll" name="pop-game-box" defaultChecked="checked"/>
         <label for="tabAll" className="hover:underline underline-offset-8">
           All
         </label>
@@ -72,7 +67,7 @@ export default function PopularGame() {
           </div>
         </div>
 
-        <input type="radio" id="tabRPG" name="pop-game-box"></input>
+        <input type="radio" id="tabRPG" name="pop-game-box"/>
         <label for="tabRPG" className="hover:underline underline-offset-8">
           RPG
         </label>
@@ -132,7 +127,7 @@ export default function PopularGame() {
           </div>
         </div>
         <input type="radio" id="tab2" name="pop-game-box"></input>
-        <label for="tab2" className="hover:underline underline-offset-8">2</label>
+        <label for="tab2" className="hover:underline underline-offset-8">...</label>
         <div class="tab">
           {/* <h2>this is on ... tab!!</h2> */}
           <div className="pgbs-container">

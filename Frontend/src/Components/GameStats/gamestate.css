@@ -5,15 +5,15 @@
 
 .title-graph{
   /* position: absolute; */
-  width: 448px;
-  height: 48px;
+  /* width: 448px;
+  height: 48px; */
   /* background-color: green; */
-  top: 0px;
-  left: 0px;
+  /* top: 0px;
+  left: 0px; */
 
   font-family: 'Inter';
   font-style: normal;
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: 0em;
@@ -23,16 +23,17 @@
 
 .updated{
   /* position: absolute; */
-  width: 312px;
+  /* width: 312px;
   height: 22px;
   top: 54px;
-  left: 1px;
+  left: 1px; */
   color: #FFFFFF;
   /* background-color: blue; */
-
+  padding-top: 8px;
+  padding-bottom: 12px;
   font-family: 'Inter';
   font-style: normal;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;

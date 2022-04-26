@@ -40,4 +40,6 @@
   line-height: 54px;
   /* identical to box height */
   color: #FFFFFF;
+
+  cursor: pointer;
 }
