@@ -1,12 +1,17 @@
-import React from 'react'
-import './tag.css'
+import React from "react";
+import "./tag.css";
 
-export default function Tag(){
-    return (
-        <div>
-            <div className='tag-container'>
-                <div className='tag-name'>Label</div>
-            </div>
-        </div>
-    );
-};
+export default function Tag(props) {
+    let tag =""
+  if(props.text.includes("&amp;")){
+
+    tag = props.text.replace('&amp;',"&");
+    console.log(tag)
+   
+  }
+  else{
+    tag = props.text
+  }
+
+  return <div className="bg-[#FEB29A] px-2 mr-3 rounded-2xl">{tag}</div>;
+}
