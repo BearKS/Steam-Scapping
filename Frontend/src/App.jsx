@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Home from './Pages/Home/Home'
-
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Pages/Home/Home";
+import Compare from "./Pages/Compare/Compare";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-
     <div className="App">
-
-      <Navbar />
-      <Home />
-
+      <BrowserRouter>
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path={"/compare"} element={<Compare />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;
