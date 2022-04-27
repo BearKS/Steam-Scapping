@@ -15,7 +15,7 @@ export default function PopularGameList(props) {
   const navigate = useNavigate();
 
   const onClickHandler = () => {
-    navigate("");
+    navigate(`/Game/${props.name}`);
   };
 
   // console.log(props.tags);
@@ -62,7 +62,7 @@ export default function PopularGameList(props) {
     //     </div>
     //   </div>
     // </div>
-    <div className="flex h-[125px] w-full">
+    <div className="flex h-[125px] w-full" onClick={onClickHandler}>
       <div className="h-full w-[75px] text-3xl font-semibold flex items-center justify-center pl-1 pr-6 ">
         {props.index + 1}.
       </div>
