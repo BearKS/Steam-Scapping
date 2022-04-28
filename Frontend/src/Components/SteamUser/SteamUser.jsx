@@ -52,7 +52,7 @@ export default function SteamUser() {
                 <>Loading...</>
               )}
               {!isLoading && (
-                <>{longEnUSFormatter.format(new Date(user.timeStamp))}</>
+                <>UPDATED : {longEnUSFormatter.format(new Date(user.timeStamp))}</>
               )}
             </div>
           </div>

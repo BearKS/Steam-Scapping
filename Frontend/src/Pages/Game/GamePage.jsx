@@ -76,7 +76,9 @@ export default function GamePage(props) {
                   <h3>Publisher : {data.publisher}</h3>
                 </div>
                 <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white">
-                  <h3>See more : {data.url}</h3>
+                  <a href={data.url} target="_blank">
+                    <h3>See more on Website</h3>
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col gap-3 w-1/2 h-1/2">
@@ -103,19 +105,23 @@ export default function GamePage(props) {
                   <div className="flex flex-col w-full font-link ">
                     <div className="text-4xl font-semibold pb-3">Review</div>
                     {/* <div className="flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-4xl "> */}
-                      {data.review.includes("Positive") && (
-                        <div className="bg-lime-500 flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-4xl">{data.review}</div>
-                      )}
-                      {data.review.includes("Mixed") && (
-                        <div className="bg-orange-500">{data.review}</div>
-                      )}
-                      {data.review.includes("Negative") && (
-                        <div className="bg-red-700">{data.review}</div>
-                      )}
-                    </div>
+                    {data.review.includes("Positive") && (
+                      <div className="bg-lime-500 flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-4xl">
+                        {data.review}
+                      </div>
+                    )}
+                    {data.review.includes("Mixed") && (
+                      <div className="bg-orange-500">{data.review}</div>
+                    )}
+                    {data.review.includes("Negative") && (
+                      <div className="bg-red-700">{data.review}</div>
+                    )}
+                  </div>
                   {/* </div> */}
                   <div className="flex flex-col w-full">
-                    <div className="text-4xl font-semibold pb-3">Now Playing</div>
+                    <div className="text-4xl font-semibold pb-3">
+                      Now Playing
+                    </div>
                     <div className="flex flex-col h-[100px]  bg-[#18365C]  rounded-2xl justify-center items-between font-link">
                       <h1>PEAK TODAY : {data.dayPeak}</h1>
                       <h1>CURRENT PLAYERS : {data.nowPlaying}</h1>
