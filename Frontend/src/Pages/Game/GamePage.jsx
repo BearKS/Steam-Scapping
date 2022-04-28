@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Tag from "../../Components/Tag/Tag";
-
+import loading from '../../Assets/giphy.gif';
 export default function GamePage(props) {
   const name = useParams().name;
 
@@ -49,7 +49,17 @@ export default function GamePage(props) {
   };
 
   return (
-    <div className="flex flex-col w-full h-full p-32  pt-12">
+     <>
+    {isLoading && (
+      <div className="flex justify-center items-center h-full w-full">
+        <img
+          className="rounded-full h-1/3 "
+          src={loading}
+          alt="Loading"
+        />
+      </div>
+    )}
+    {!isLoading && (<div className="flex flex-col w-full h-full p-32  pt-12">
       <div className="flex flex-col w-full h-full">
         <div className="flex  text-white text-5xl font-bold">{data.name}</div>
         <div className="flex flex-row h-full gap-12 w-full">
@@ -67,7 +77,7 @@ export default function GamePage(props) {
               <h3>Publisher : {data.publisher}</h3>
             </div>
             <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white">
-              <h3>See more : {data.publisher}</h3>
+              <h3>See more : {data.url}</h3>
             </div>
           </div>
           <div className="flex flex-col gap-3 w-1/2 h-1/2">
@@ -106,6 +116,7 @@ export default function GamePage(props) {
           </div>
         </div>
       </div>
-    </div>
+    </div>)}
+    </>
   );
 }
