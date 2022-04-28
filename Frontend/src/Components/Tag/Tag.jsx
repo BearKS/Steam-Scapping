@@ -5,7 +5,6 @@ export default function Tag(props) {
   let tag = "";
   if (props.text.includes("&amp;")) {
     tag = props.text.replace("&amp;", "&");
-    console.log(tag);
   } else {
     tag = props.text;
   }
