@@ -257,7 +257,7 @@ export default function PopularGame() {
           All
         </label>
         <div className="tab">
-          <div className="flex flex-col gap-3 m-5 p-5 w-full">
+          <div className="flex flex-col gap-3  p-5 h-full w-full ">
             {isLoading && (
               <div className="flex justify-center items-center h-full w-full">
                 {/* <svg
