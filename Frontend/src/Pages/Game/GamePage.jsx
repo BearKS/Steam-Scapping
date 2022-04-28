@@ -51,12 +51,12 @@ export default function GamePage(props) {
   return (
     <>
       {isLoading && (
-        <div className="flex justify-center items-center h-full w-full">
-          <img className="rounded-full h-1/3 " src={loading} alt="Loading" />
+        <div className="flex justify-center h-full w-full ">
+          <img className="rounded-full h-1/3 m-40" src={loading} alt="Loading" />
         </div>
       )}
       {!isLoading && (
-        <div className="flex flex-col w-full h-full p-32  pt-12">
+        <div className="flex flex-col w-full h-full p-32 pt-12 justify-center">
           <div className="flex flex-col w-full h-full">
             <div className="flex  text-white text-5xl font-bold font-link pb-8">
               {data.name}
@@ -69,14 +69,23 @@ export default function GamePage(props) {
                     className="h-full rounded-2xl object-cover"
                   />
                 </div>
-                <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white font-link">
-                  <h3>Developer : {data.developer}</h3>
+
+                <div className="inline-flex gap-5">
+                  <div className="bg-[#132845] h-[100px] px-6 py-5 rounded-sm text-white font-link text-2xl">
+                    <h1>Developer : {data.developer}</h1>
+                    <h1>Publisher : {data.publisher}</h1>
+                  </div>
+                  {/* <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white font-link"> */}
+                    
+                  {/* </div> */}
                 </div>
-                <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white font-link">
-                  <h3>Publisher : {data.publisher}</h3>
-                </div>
-                <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white">
-                  <h3>See more : {data.url}</h3>
+
+
+
+                <div className="bg-[#132845] h-1/4 px-6 py-5 rounded-sm text-white text-[#00bdde] ">
+                  <a href={data.url} target="_blank">
+                  <h3 className="underline-offset-1">See more : {data.url}</h3>
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col gap-3 w-1/2 h-1/2">
@@ -99,28 +108,35 @@ export default function GamePage(props) {
                     );
                   })}
                 </div>
-                <div className="flex flex-col-2 w-full  h-full text-white text-2xl gap-5 font-link">
-                  <div className="flex flex-col w-full font-link ">
-                    <div className="text-4xl font-semibold pb-3">Review</div>
-                    {/* <div className="flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-4xl "> */}
-                      {data.review.includes("Positive") && (
-                        <div className="bg-lime-500 flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-4xl">{data.review}</div>
-                      )}
-                      {data.review.includes("Mixed") && (
-                        <div className="bg-orange-500">{data.review}</div>
-                      )}
-                      {data.review.includes("Negative") && (
-                        <div className="bg-red-700">{data.review}</div>
-                      )}
-                    </div>
-                  {/* </div> */}
-                  <div className="flex flex-col w-full">
+                <div className="flex flex-col-2 w-full mt-12 h-full text-white text-2xl gap-5 font-link">
+
+                 <div className="flex flex-col w-full ml-3">
                     <div className="text-4xl font-semibold pb-3">Now Playing</div>
                     <div className="flex flex-col h-[100px]  bg-[#18365C]  rounded-2xl justify-center items-between font-link">
                       <h1>PEAK TODAY : {data.dayPeak}</h1>
                       <h1>CURRENT PLAYERS : {data.nowPlaying}</h1>
                     </div>
                   </div>
+                  
+                  <div className="flex flex-col w-full font-link rounded-xl">
+                    <div className="text-4xl font-semibold pb-3">Review</div>
+                    {/* <div className="flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-4xl "> */}
+                    {data.review.includes("Positive") && (
+                      <div className="bg-lime-500 flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-3xl text-center">{data.review}</div>
+                    )}
+                    {data.review.includes("Mixed") && (
+                      <div className="bg-orange-500">{data.review}</div>
+                    )}
+                    {data.review.includes("Negative") && (
+                      <div className="bg-red-700">{data.review}</div>
+                    )}
+                  </div>
+
+                
+                  
+ 
+
+
                 </div>
               </div>
             </div>
