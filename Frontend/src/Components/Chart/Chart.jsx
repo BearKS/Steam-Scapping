@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -45,7 +46,11 @@ const data = [
   },
 ];
 
+
+
+
 export default function Chart() {
+
     return (
         <ResponsiveContainer width="100%" height="100%" >
           <LineChart

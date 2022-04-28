@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={<Home />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-          <Route path={"/Game"} element={<GamePage />} />
+          <Route path={"/Game/:name"} element={<GamePage />} />
           <Route path={"/Search"} element={<SearchPage />} />
         </Routes>
       </div>

@@ -1,75 +1,106 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Tag from "../../Components/Tag/Tag";
 
 export default function GamePage(props) {
   const name = useParams().name;
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState();
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await fetch(
-  //         `https://tocfastapi.herokuapp.com/findByName?name=${name}`,
-  //         {
-  //           method: "GET",
-  //         }
-  //       );
+  const [data, setData] = useState({
+    id: "",
+    name: "",
+    description: "",
+    review: "",
+    tag: [],
+    developer: "",
+    publisher: "",
+    url: "",
+    cover_url: "",
+    nowPlaying: "",
+    dayPeak: "",
+  });
 
-  //       if (!res.ok) {
-  //         throw new Error();
-  //       }
-
-  //       const responseData = await res.json();
-
-  //       setData(responseData);
-  //       console.log(responseData)
-  //       setIsLoading(false);
-  //     } catch {}
-  //   };
-  //   fetchData();
-  // }, []);
+  const fetchData = async () => {
+    const res = await fetch(
+      `https://tocfastapi.herokuapp.com/findByName?name=${name}`,
+      {
+        method: "GET",
+      }
+    );
+    let json = await res.json();
+    await setData({
+      id: json[0].id,
+      name: json[0].name,
+      description: json[0].description,
+      review: json[0].review,
+      tag: json[0].tag,
+      developer: json[0].developer,
+      publisher: json[0].publisher,
+      url: json[0].url,
+      cover_url: json[0].cover_url,
+      nowPlaying: json[0].nowPlaying,
+      dayPeak: json[0].dayPeak,
+    });
+    setIsLoading(false);
+  };
 
   return (
-    <div className="my-16 mx-44 h-full ">
-      <div className="flex flex-col h-[450px] ">
-        <div className="flex pr-10  text-white text-5xl font-bold mb-5 h-full">
-          Name
-        </div>
-        <div className="flex flex-co h-full gap-12 ">
-          <div className="h-full">
-            <img
-              src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/header.jpg?t=1651073529"
-              className="h-full rounded-2xl object-cover"
-            />
+    <div className="flex flex-col w-full h-full p-32  pt-12">
+      <div className="flex flex-col w-full h-full">
+        <div className="flex  text-white text-5xl font-bold">{data.name}</div>
+        <div className="flex flex-row h-full gap-12 w-full">
+          <div className="flex flex-col h-full gap-6">
+            <div className="h-1/2">
+              <img
+                src={data.cover_url}
+                className="h-full rounded-2xl object-cover"
+              />
+            </div>
+            <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white">
+              <h3>Developer : {data.developer}</h3>
+            </div>
+            <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white">
+              <h3>Publisher : {data.publisher}</h3>
+            </div>
+            <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white">
+              <h3>See more : {data.publisher}</h3>
+            </div>
           </div>
-          <div className="w-1/2 h-full">
-            <div className="w-full bg-red-500 px-6 py-5 rounded-2xl">
-              <div className="text-2xl text-white mb-2 ">Description</div>
+          <div className="flex flex-col gap-3 w-1/2 h-1/2">
+            <div className="w-full ">
+              <div className="text-2xl text-white">Description</div>
 
-              <div className="text-xl text-white indent-10 text-justify">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
-                voluptatum eaque eum minus sed? Maiores ipsam similique nam
-                eveniet quam, ea, eligendi, a distinctio harum accusamus labore!
-                Quas, numquam? Cum perspiciatis ducimus laboriosam sed cumque
-                obcaecati id. Nostrum ea atque repellat omnis beatae deserunt,
-                incidunt in tenetur sapiente nihil. Architecto fugit odio
-                commodi adipisci rerum eligendi repellat soluta ullam harum
-                dicta natus obcaecati sunt totam nesciunt repellendus officiis
-                quis sequi saepe voluptates, placeat autem nemo eius et? Nemo,
-                repudiandae. Modi corrupti, commodi inventore accusamus nisi
-                debitis ullam dolor doloremque error, obcaecati dolores
-                provident totam earum. Ab dolor nobis enim fugit.
+              <div className="text-xl text-white indent-10 text-justify bg-gray-400 px-6 py-5 rounded-2xl">
+                {data.description}
               </div>
             </div>
 
-            <div className="text-white h-1/3 bg-yellow-500 px-6 py-5 ">
-              TAG
+            <div className="flex flex-wrap text-white">
+              {data.tag.map((e) => {
+                return (
+                  <div>
+                    <Tag text={e} key={e} />
+                  </div>
+                );
+              })}
             </div>
-            <div className="flex flex-col w-full  h-full items-end text-white text-2xl">
-              <div>Review</div>
-              <div className="h-[100px] w-1/2 bg-sky-500 px-6 py-5 rounded-2xl">
-
+            <div className="flex flex-col-2 w-full  h-full text-white text-2xl gap-5">
+              <div className="flex flex-col w-full ">
+                <div className="">Review</div>
+                <div className="flex h-[100px]  bg-sky-500 px-6 py-5 rounded-2xl justify-center items-center">
+                  <h1>{data.review}</h1>
+                </div>
+              </div>
+              <div className="flex flex-col w-full">
+                <div className="">Now Playing</div>
+                <div className="flex flex-col h-[100px]  bg-sky-500 px-6 py-5 rounded-2xl justify-center items-between">
+                  <h1>PEAK TODAY : {data.dayPeak}</h1>
+                  <h1>CURRENT PLAYERS	 : {data.nowPlaying}</h1>
+                </div>
               </div>
             </div>
           </div>
