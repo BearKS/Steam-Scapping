@@ -77,84 +77,95 @@ function Search() {
 
   return (
     <div>
-      <Select
-        isMulti
-        name="game"
-        options={gamesOptions}
-        onChange={handleSelectGame}
-        className="basic-multi-select"
-        classNamePrefix="select"
-      />
-      <div className="pop-game-box">
-        <input
-          type="radio"
-          id="tabAll"
-          name="pop-game-box"
-          defaultChecked="checked"
+      <div className="flex  justify-center pt-10">
+        <Select
+          isMulti
+          name="game"
+          options={gamesOptions}
+          onChange={handleSelectGame}
+          className="basic-multi-select w-[800px]"
+          classNamePrefix="select"
         />
-        <label htmlFor="tabAll" className="hover:underline underline-offset-8">
-          Results
-        </label>
-        <div className="tab">
-          <div className="flex flex-col gap-3 p-5">
-            <div>
-              {games === undefined || games.length === 0 ? (
-                <div className="flex justify-center items-center h-full w-full">
-                  <img
-                    className="rounded-full h-1/3 "
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              ) : (
-                <div>
-                  {showTag.length === 0 || showTag === undefined ? (
-                    <div>
-                      {" "}
-                      {games.map((game, index) => {
-                        return (
-                          <PopularGameList
-                            {...game}
-                            index={index}
-                            key={game.id}
-                          />
-                        );
-                      })}
-                    </div>
-                  ) : (
-                    <div>
-                      {isLoading ? (
-                        <div className="flex justify-center items-center h-full w-full">
-                          <img
-                            className="rounded-full h-1/3 "
-                            src={loading}
-                            alt="Loading"
-                          />
-                        </div>
-                      ) : (
-                        <div>
-                          {gameByTag === undefined || gameByTag === null || gameByTag.length === 0 ? (
-                            <div>Not Found</div>
-                          ) : (
-                            <div>
-                              {" "}
-                              {gameByTag.map((game, index) => {
-                                return (
-                                  <PopularGameList
-                                    {...game}
-                                    index={index}
-                                    key={game.id}
-                                  />
-                                );
-                              })}
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              )}
+      </div>
+      <div className="flex justify-center pt-5">
+        <div className="pop-game-box">
+          <div className="text-4xl text-white pb-5">
+            {showTag.length === 0 ? (
+              <div>You haven't searched any tag</div>
+            ) : (
+              <div>
+                {gameByTag.length === 0 ? (
+                  <div>Results : 0 game</div>
+                ) : (
+                  <div>Results : {gameByTag.length} Found</div>
+                )}
+              </div>
+            )}
+          </div>
+
+          <div className="tab">
+            <div className="flex flex-col gap-3 p-5">
+              <div>
+                {games === undefined || games.length === 0 ? (
+                  <div className="flex justify-center items-center h-full w-full">
+                    <img
+                      className="rounded-full h-1/3 "
+                      src={loading}
+                      alt="Loading"
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    {showTag.length === 0 || showTag === undefined ? (
+                      <div>
+                        {" "}
+                        {games.map((game, index) => {
+                          return (
+                            <PopularGameList
+                              {...game}
+                              index={index}
+                              key={game.id}
+                            />
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div>
+                        {isLoading ? (
+                          <div className="flex justify-center items-center h-full w-full">
+                            <img
+                              className="rounded-full h-1/3 "
+                              src={loading}
+                              alt="Loading"
+                            />
+                          </div>
+                        ) : (
+                          <div>
+                            {gameByTag === undefined ||
+                            gameByTag === null ||
+                            gameByTag.length === 0 ? (
+                              <div>Not Found</div>
+                            ) : (
+                              <div>
+                                {" "}
+                                {gameByTag.map((game, index) => {
+                                  return (
+                                    <PopularGameList
+                                      {...game}
+                                      index={index}
+                                      key={game.id}
+                                    />
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -164,4 +175,3 @@ function Search() {
 }
 
 export default Search;
-

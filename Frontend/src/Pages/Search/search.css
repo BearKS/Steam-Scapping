@@ -77,7 +77,7 @@
     overflow-wrap: inherit;
     -webkit-box-orient: vertical;
   }
-  .pop-game-box input[type="radio"]:checked + label + .tab{
+  .pop-game-box  .tab{
     display: block;
   }
   .pop-game-box input[type="radio"]:checked + label {
