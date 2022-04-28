@@ -89,8 +89,8 @@ function Search() {
   }, [showTag]);
 
   return (
-    <div>
-      <div className="flex  justify-center pt-10">
+    <div className="h-full w-full">
+      <div className="flex  justify-center pt-10 h-full w-full">
         <Select
           isMulti
           name="game"
@@ -100,7 +100,7 @@ function Search() {
           classNamePrefix="select"
         />
       </div>
-      <div className="flex justify-center pt-5">
+      <div className="flex justify-center pt-5 h-full w-full">
         <div className="pop-game-box">
           <div className="text-4xl text-white pb-5 w-full">
             {showTag.length === 0 ? (
@@ -116,13 +116,13 @@ function Search() {
             )}
           </div>
 
-          <div className="tab">
-            <div className="flex flex-col gap-3 p-5">
-              <div>
+          <div className="h-[800px] overflow-x-scroll overflow-y-scroll bg-gray-200 w-full">
+            <div className="flex flex-col gap-3 p-5 h-full w-full">
+              <div className="h-full w-full">
                 {games === undefined || games.length === 0 ? (
                   <div className="flex justify-center items-center h-full w-full">
                     <img
-                      className="rounded-full h-1/3 "
+                      className="rounded-full h-[200px] "
                       src={loading}
                       alt="Loading"
                     />
