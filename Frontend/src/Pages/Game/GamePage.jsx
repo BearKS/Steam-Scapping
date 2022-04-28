@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Tag from "../../Components/Tag/Tag";
 import loading from '../../Assets/giphy.gif';
+import { Link } from "react-router-dom";
 export default function GamePage(props) {
   const name = useParams().name;
 
@@ -77,7 +78,9 @@ export default function GamePage(props) {
               <h3>Publisher : {data.publisher}</h3>
             </div>
             <div className="bg-gray-400 h-1/4 px-6 py-5 rounded-2xl text-white">
-              <h3>See more : {data.url}</h3>
+            <a href={data.url} target="_blank" >
+              <h3>See more on Website</h3>
+              </a>
             </div>
           </div>
           <div className="flex flex-col gap-3 w-1/2 h-1/2">

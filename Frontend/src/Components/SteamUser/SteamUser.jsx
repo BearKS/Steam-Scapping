@@ -39,17 +39,13 @@ export default function SteamUser() {
     <>
       <div>
         <div className="pb-3 flex flex-col">
-          <div className="title-steamuser">
-            Concurrent Steam Users:
-          </div>
+          <div className="title-steamuser">Concurrent Steam Users:</div>
         </div>
 
         <div className="detail-steamuser">
           <div className="pb-3 flex flex-col">
             <div className="detail-steamuser">
-            {isLoading && (
-                <>Loading...</>
-              )}
+              {isLoading && <>Loading...</>}
               {!isLoading && (
                 <>{longEnUSFormatter.format(new Date(user.timeStamp))}</>
               )}
@@ -72,20 +68,14 @@ export default function SteamUser() {
                 Current
               </div>
               <div className="relative text-white text-5xl font-medium pb-7">
-              {isLoading && (
-                <>Loading...</>
-              )}
-              {!isLoading && (
-                <>{user.nowPlaying}</>
-              )}
-                
+                {isLoading && <>Loading...</>}
+                {!isLoading && <>{user.nowPlaying}</>}
               </div>
             </div>
           </div>
 
           {/* 375885 */}
           <div className="flex flex-col gap-2 justify-center text-center  w-[250px] h-[250px] bg-[#] rounded-full ">
-
             <div className="circulate">
               <div className="circle">
                 <div className="wave _one"></div>
@@ -94,17 +84,12 @@ export default function SteamUser() {
               </div>
             </div>
             <div className="c-base">
-              <div className="relative text-white text-3xl font-light font-medium">
+              <div className="relative text-white text-3xl font-medium">
                 Peak
               </div>
               <div className="relative text-white text-5xl font-medium pb-7 ">
-              {isLoading && (
-                <>Loading...</>
-              )}
-              {!isLoading && (
-                <>{user.dayPeak}</>
-              )}
-                
+                {isLoading && <>Loading...</>}
+                {!isLoading && <>{user.dayPeak}</>}
               </div>
             </div>
           </div>
