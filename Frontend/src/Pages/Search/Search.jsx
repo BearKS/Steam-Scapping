@@ -8,9 +8,9 @@ import "./search.css";
 
 function Search() {
   const [isLoading, setIsloading] = useState(false);
-  const [data,setData] = useState({
-    "dayPeak" : "0",
-    "nowPlaying" : "0"
+  const [data, setData] = useState({
+    dayPeak: "0",
+    nowPlaying: "0",
   });
   const [showTag, setShowTag] = useState([]);
   const [gameByTag, setGameByTag] = useState();
@@ -24,10 +24,10 @@ function Search() {
     });
     let res = await data.json();
     setData({
-      dayPeak : res.sum_dayPeak,
-      nowPlaying : res.sum_nowPlaying
-    })
-    res = res.gameData
+      dayPeak: res.sum_dayPeak,
+      nowPlaying: res.sum_nowPlaying,
+    });
+    res = res.gameData;
     res = res.filter((e) => e.name !== "No data");
     setGames(res);
     addTag(res);
@@ -42,10 +42,10 @@ function Search() {
     });
     let res = await data.json();
     setData({
-      dayPeak : res.sum_dayPeak,
-      nowPlaying : res.sum_nowPlaying
-    })
-    res = res.gameData
+      dayPeak: res.sum_dayPeak,
+      nowPlaying: res.sum_nowPlaying,
+    });
+    res = res.gameData;
     res = res.filter((e) => e.name !== "No data");
     setGameByTag(res);
     setIsloading(false);
@@ -80,7 +80,9 @@ function Search() {
   };
 
   useEffect(() => {
+    setIsloading(true);
     getData();
+    setIsloading(false);
   }, []);
 
   useEffect(() => {
@@ -104,19 +106,28 @@ function Search() {
         <div className="pop-game-box">
           <div className="text-4xl text-white pb-5 w-full">
             {showTag.length === 0 ? (
-              <div className="flex flex-row justify-between"><h1>You haven't searched any tag</h1><h1>Sum of Playing : {data.nowPlaying}</h1></div>
+              <div className="flex flex-row justify-between">
+                <h1>You haven't searched any tag</h1>
+                <h1>Sum of Playing : {data.nowPlaying}</h1>
+              </div>
             ) : (
               <div>
                 {gameByTag.length === 0 ? (
-                  <div className="flex flex-row justify-between"><h1>Results : 0 game</h1><h1>Sum of Playing : 0</h1></div>
+                  <div className="flex flex-row justify-between">
+                    <h1>Results : 0 game</h1>
+                    <h1>Sum of Playing : 0</h1>
+                  </div>
                 ) : (
-                  <div className="flex flex-row justify-between"><h1>Results : {gameByTag.length} Found</h1><h1>Sum of Playing : {data.nowPlaying}</h1></div>
+                  <div className="flex flex-row justify-between">
+                    <h1>Results : {gameByTag.length} Found</h1>
+                    <h1>Sum of Playing : {data.nowPlaying}</h1>
+                  </div>
                 )}
               </div>
             )}
           </div>
 
-          <div className="h-[800px] overflow-x-scroll overflow-y-scroll bg-gray-200 w-full">
+          <div className="h-[650px] overflow-x-scroll overflow-y-scroll bg-gray-200 w-full">
             <div className="flex flex-col gap-3 p-5 h-full w-full">
               <div className="h-full w-full">
                 {games === undefined || games.length === 0 ? (
@@ -128,10 +139,9 @@ function Search() {
                     />
                   </div>
                 ) : (
-                  <div>
+                  <div className="h-full w-full">
                     {showTag.length === 0 || showTag === undefined ? (
-                      <div>
-                        {" "}
+                      <div className="flex flex-col gap-3">
                         {games.map((game, index) => {
                           return (
                             <PopularGameList
@@ -143,11 +153,11 @@ function Search() {
                         })}
                       </div>
                     ) : (
-                      <div>
+                      <div className="h-full w-full">
                         {isLoading ? (
                           <div className="flex justify-center items-center h-full w-full">
                             <img
-                              className="rounded-full h-1/3 "
+                              className="rounded-full h-[200px] "
                               src={loading}
                               alt="Loading"
                             />
@@ -159,8 +169,7 @@ function Search() {
                             gameByTag.length === 0 ? (
                               <div>Not Found</div>
                             ) : (
-                              <div>
-                                {" "}
+                              <div className="flex flex-col gap-3">
                                 {gameByTag.map((game, index) => {
                                   return (
                                     <PopularGameList
