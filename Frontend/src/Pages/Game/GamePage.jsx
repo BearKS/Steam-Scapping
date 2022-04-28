@@ -50,15 +50,14 @@ export default function GamePage(props) {
 
   return (
     <>
-    <div className="h-full w-full">
       {isLoading && (
        
-        <div className="flex text-center">
+        <div className="flex h-full w-full justify-center ">
           <img className="rounded-full h-1/3 m-40 w-60 h-60 justify-center" src={loading} alt="Loading" />
         </div>
       )}
       {!isLoading && (
-        <div className="flex flex-col w-full h-full p-32 pt-12 justify-center">
+        <div className="flex flex-col w-full h-full p-32 pt-12 place-items-center">
           <div className="flex flex-col w-full h-full">
             <div className="flex  text-white text-5xl font-bold font-link pb-8">
               {data.name}
@@ -145,7 +144,6 @@ export default function GamePage(props) {
           </div>
         </div>
       )}
-      </div>
     </>
   );
 }
