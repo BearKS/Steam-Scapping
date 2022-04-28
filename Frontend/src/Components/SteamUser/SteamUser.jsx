@@ -40,9 +40,7 @@ export default function SteamUser() {
       <div>
         <div className="pb-3 flex flex-col">
           <div className="title-steamuser">
-            {/* <div className="text-white font-semibold text-4xl"> */}
             Concurrent Steam Users:
-            {/* </div> */}
           </div>
         </div>
 
@@ -59,23 +57,13 @@ export default function SteamUser() {
           </div>
         </div>
 
-        {/* <div className="ocean-base">
-            <div class="ocean">
-              <div class="wave"></div>
-              <div class="wave"></div>
-            </div>
-          </div> */}
-
         <div className="flex justify-center gap-10">
           <div className="flex flex-col gap-2 justify-center text-center  w-[250px] h-[250px] bg-[#] rounded-full ">
-            {/* <div class="main">
-                <div class="circle1"></div>
-              </div> */}
-            <div class="circulate">
-              <div class="circle">
-                <div class="wave _one"></div>
-                <div class="wave _two"></div>
-                <div class="wave _three"></div>
+            <div className="circulate">
+              <div className="circle">
+                <div className="wave _one"></div>
+                <div className="wave _two"></div>
+                <div className="wave _three"></div>
               </div>
             </div>
 
@@ -97,14 +85,12 @@ export default function SteamUser() {
 
           {/* 375885 */}
           <div className="flex flex-col gap-2 justify-center text-center  w-[250px] h-[250px] bg-[#] rounded-full ">
-            {/* <div class="main">
-                <div class="circle1" style={{ animation: " circle1 7s linear infinite" }}></div>
-              </div> */}
-            <div class="circulate">
-              <div class="circle">
-                <div class="wave _one"></div>
-                <div class="wave _two"></div>
-                <div class="wave _three"></div>
+
+            <div className="circulate">
+              <div className="circle">
+                <div className="wave _one"></div>
+                <div className="wave _two"></div>
+                <div className="wave _three"></div>
               </div>
             </div>
             <div className="c-base">

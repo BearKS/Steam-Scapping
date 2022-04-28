@@ -12,6 +12,7 @@ function Search() {
     dayPeak: "0",
     nowPlaying: "0",
   });
+  const [allPlaying, setAllPlaying] = useState();
   const [showTag, setShowTag] = useState([]);
   const [gameByTag, setGameByTag] = useState();
   const [gamesOptions, setGameOptions] = useState([]);
@@ -27,6 +28,7 @@ function Search() {
       dayPeak: res.sum_dayPeak,
       nowPlaying: res.sum_nowPlaying,
     });
+    setAllPlaying(res.sum_nowPlaying)
     res = res.gameData;
     res = res.filter((e) => e.name !== "No data");
     setGames(res);
@@ -41,6 +43,7 @@ function Search() {
       }),
     });
     let res = await data.json();
+    
     setData({
       dayPeak: res.sum_dayPeak,
       nowPlaying: res.sum_nowPlaying,
@@ -108,7 +111,7 @@ function Search() {
             {showTag.length === 0 ? (
               <div className="flex flex-row justify-between">
                 <h1>You haven't searched any tag</h1>
-                <h1>Sum of Playing : {data.nowPlaying}</h1>
+                <h1>Sum of Playing : {allPlaying}</h1>
               </div>
             ) : (
               <div>
