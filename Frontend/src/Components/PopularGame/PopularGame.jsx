@@ -110,11 +110,11 @@ export default function PopularGame() {
         "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
     },
   ]);
- 
+
   const [RPG, setRPG] = useState();
-  const [MOBA,setMOBA] = useState();
-  const [action,setAction] = useState();
-  const [horror,setHorror] = useState();
+  const [MOBA, setMOBA] = useState();
+  const [action, setAction] = useState();
+  const [horror, setHorror] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -142,7 +142,7 @@ export default function PopularGame() {
             }),
           }
         );
-  
+
         const resAction = await fetch(
           "https://tocfastapi.herokuapp.com/findByTag",
           {
@@ -163,7 +163,7 @@ export default function PopularGame() {
           }
         );
 
-        if (!res.ok || !resRPG.ok ) {
+        if (!res.ok || !resRPG.ok) {
           throw new Error();
         }
 
@@ -172,7 +172,7 @@ export default function PopularGame() {
         const responseMOBA = await resMOBA.json();
         const responseAction = await resAction.json();
         const responseHorror = await resHorror.json();
-        
+
         setData(responseData);
         setRPG(responseRPG);
         setMOBA(responseMOBA);
@@ -239,7 +239,7 @@ export default function PopularGame() {
               MOBA
             </label>
             <div className="tab">
-            <div className="flex flex-col gap-3 p-5">
+              <div className="flex flex-col gap-3 p-5">
                 {MOBA.map((e, index) => {
                   if (e.name !== "No data") {
                     return <PopularGameList {...e} index={index} key={e.id} />;
@@ -256,14 +256,13 @@ export default function PopularGame() {
               Action
             </label>
             <div className="tab">
-            <div className="flex flex-col gap-3 p-5">
+              <div className="flex flex-col gap-3 p-5">
                 {action.map((e, index) => {
                   if (e.name !== "No data") {
                     return <PopularGameList {...e} index={index} key={e.id} />;
                   }
                 })}
               </div>
-          
             </div>
             <input type="radio" id="tabHorror" name="pop-game-box"></input>
             <label
@@ -273,7 +272,7 @@ export default function PopularGame() {
               Horror
             </label>
             <div className="tab">
-            <div className="flex flex-col gap-3 p-5">
+              <div className="flex flex-col gap-3 p-5">
                 {horror.map((e, index) => {
                   if (e.name !== "No data") {
                     return <PopularGameList {...e} index={index} key={e.id} />;
