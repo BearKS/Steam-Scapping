@@ -10,7 +10,8 @@ function Compare() {
     { value: "vanilla", label: "Vanilla" },
   ];
   const handleSelectGame = (e) => {
-    setSelectGame(e.value);
+    console.log(e)
+    // setSelectGame(e.value);
   };
 
   const customStyles = {
@@ -42,12 +43,21 @@ function Compare() {
         <div className="  m-auto col-span-3 w-5/6">
           <div className="bg-slate-400 p-4 rounded-xl">
             <Select
+              isMulti
+              name="game"
+              options={options}
+              onChange={handleSelectGame}
+              className="basic-multi-select"
+              classNamePrefix="select"
+            />
+            {/* <Select
+              isMulti={true}
               onChange={handleSelectGame}
               options={options}
               menuPortalTarget={document.body}
               menuPosition={"fixed"}
               styles={customStyles}
-            />
+            /> */}
           </div>
           <img
             className="rounded-xl my-6"
@@ -86,7 +96,6 @@ function Compare() {
           เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่
           เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่
           เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่ เยอะๆเลยเย็ดแม่
-          
         </div>
         <div className=" col-start-1  ml-auto ">
           <div className="bg-slate-800 p-2 pl-5 text-xl rounded-l-xl float-right w-36">
