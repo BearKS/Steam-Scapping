@@ -276,7 +276,9 @@ body {
 .circulate .wave._two {
   animation: humming 9000ms infinite linear;
   opacity: 1;
-  background: #0f1023; }
+  background: #0f1023; 
+
+}
 
 .circulate .box:after {
   content: '';
@@ -305,6 +307,138 @@ body {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   text-indent: 0.3em; }
 
+
+  .circulate .circle {
+  width: 250px;
+  height: 250px;
+  margin: 0px -35px 30px;
+  border-radius: 100%;
+  border: 2px solid rgb(133, 133, 133);
+  background: white;
+  box-shadow: 0 2px 150px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to left top, #23345d, #921664);
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0); }
+
+.circulate .wave {
+  opacity: 0.4;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  background: rgba(15, 16, 35, 0.56);
+  width: 200px;
+  height: 250px;
+  margin-left: -100px;
+  margin-top: -55px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: humming 2.5s infinite linear; }
+
+.circulate .wave._three {
+  animation: humming 5000ms infinite linear; }
+
+.circulate .wave._two {
+  animation: humming 9000ms infinite linear;
+  opacity: 1;
+  background: #0f1023; 
+
+}
+
+.circulate .box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0); }
+
+.circulate .title {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  z-index: 1;
+  line-height: 30px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.4em;
+  font-size: 24px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-indent: 0.3em; }
+
+  
+  /****************************************************************************/
+
+
+  .circulate1 .circle {
+    width: 250px;
+    height: 250px;
+    margin: 0px -35px 30px;
+    border-radius: 100%;
+    border: 2px solid rgb(133, 133, 133);
+    background: white;
+    box-shadow: 0 2px 150px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to left top, green, cyan);
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0); }
+  
+  .circulate1 .wave {
+    opacity: 0.4;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    background: rgba(15, 16, 35, 0.56);
+    width: 200px;
+    height: 250px;
+    margin-left: -100px;
+    margin-top: -55px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: humming 2.5s infinite linear; }
+  
+  .circulate1 .wave._three {
+    animation: humming 5200ms infinite linear; }
+  
+  .circulate1 .wave._two {
+    animation: humming 9200ms infinite linear;
+    opacity: 1;
+    background: #0f1023; 
+  
+  }
+  
+  .circulate1 .box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0); }
+  
+  .circulate1 .title {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    z-index: 1;
+    line-height: 30px;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.4em;
+    font-size: 24px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    text-indent: 0.3em; }
 @keyframes humming {
   from {
     transform: rotate(0deg); }

@@ -101,7 +101,7 @@ function Search() {
           name="game"
           options={gamesOptions}
           onChange={handleSelectGame}
-          className="basic-multi-select w-[800px]"
+          className="basic-multi-select w-[1200px]"
           classNamePrefix="select"
         />
       </div>
