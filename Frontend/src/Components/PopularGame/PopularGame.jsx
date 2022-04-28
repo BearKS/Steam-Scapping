@@ -6,110 +6,7 @@ const URL = `https://cc-mock-api.herokuapp.com`;
 
 export default function PopularGame() {
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState([
-    {
-      id: 1,
-      name: "Counter-Strike: Global Offensive",
-      description:
-        "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
-      review: "Very Positive",
-      tag: [
-        "FPS",
-        "Shooter",
-        "Multiplayer",
-        "Competitive",
-        "Action",
-        "Team-Based",
-        "eSports",
-        "Tactical",
-        "First-Person",
-        "PvP",
-        "Online Co-Op",
-        "Co-op",
-        "Strategy",
-        "Military",
-        "War",
-        "Difficult",
-        "Trading",
-        "Realistic",
-        "Fast-Paced",
-        "Moddable",
-      ],
-      developer: "Valve, Hidden Path Entertainment",
-      publisher: "Valve",
-      url: "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
-      cover_url:
-        "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
-    },
-    {
-      id: 2,
-      name: "Counter-Strike: Global Offensive",
-      description:
-        "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
-      review: "Overwhelmingly Negative",
-      tag: [
-        "FPS",
-        "Shooter",
-        "Multiplayer",
-        "Competitive",
-        "Action",
-        "Team-Based",
-        "eSports",
-        "Tactical",
-        "First-Person",
-        "PvP",
-        "Online Co-Op",
-        "Co-op",
-        "Strategy",
-        "Military",
-        "War",
-        "Difficult",
-        "Trading",
-        "Realistic",
-        "Fast-Paced",
-        "Moddable",
-      ],
-      developer: "Valve, Hidden Path Entertainment",
-      publisher: "Valve",
-      url: "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
-      cover_url:
-        "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
-    },
-    {
-      id: 3,
-      name: "Counter-Strike: Global Offensive",
-      description:
-        "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
-      review: "Mixed",
-      tag: [
-        "FPS",
-        "Shooter",
-        "Multiplayer",
-        "Competitive",
-        "Action",
-        "Team-Based",
-        "eSports",
-        "Tactical",
-        "First-Person",
-        "PvP",
-        "Online Co-Op",
-        "Co-op",
-        "Strategy",
-        "Military",
-        "War",
-        "Difficult",
-        "Trading",
-        "Realistic",
-        "Fast-Paced",
-        "Moddable",
-      ],
-      developer: "Valve, Hidden Path Entertainment",
-      publisher: "Valve",
-      url: "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
-      cover_url:
-        "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/",
-    },
-  ]);
+  const [data, setData] = useState();
 
   // const [RPG, setRPG] = useState();
   // const [MOBA,setMOBA] = useState();
@@ -242,7 +139,7 @@ export default function PopularGame() {
     <div>
       <div className="title-popgame">POPULAR GAMES</div>
 
-      <div className="pop-game-box">
+      <div className="pop-game-box ">
         <input
           type="radio"
           id="tabAll"
@@ -251,12 +148,14 @@ export default function PopularGame() {
         />
         <label
           htmlFor="tabAll"
-          onClick={fetchData}
+          onClick={() => {
+            fetchData(null);
+          }}
           className="hover:underline underline-offset-8"
         >
           All
         </label>
-        <div className="tab">
+        <div className="tab h-full">
           <div className="flex flex-col gap-3  p-5 h-full w-full ">
             {isLoading && (
               <div className="flex justify-center items-center h-full w-full">

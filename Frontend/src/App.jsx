@@ -13,7 +13,7 @@ function App() {
     <div className="App">
 
       <Navbar />
-      <div className='pt-[80px]'>
+      <div >
         <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/Game"} element={<GamePage />} />

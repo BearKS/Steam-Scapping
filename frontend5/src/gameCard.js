@@ -29,7 +29,7 @@ export const GameCard = ({
                     </h1>
                     <div className="grid grid-cols-8 mt-2">
                         <div class="col-span-6">
-                            <div className="flex flex-wrap">
+                            <div className="flex flex-wrap ">
                                 {
                                     tag.map((label) => (
                                         <div className="px-2 m-1 text-sm text-orange-600 bg-orange-200 rounded-full">
