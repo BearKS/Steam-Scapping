@@ -37,13 +37,14 @@ export default function PopularGameList(props) {
             </div>
 
             <div className="flex my-5 h-3/4 flex-wrap ">
-              {tag.map((e,index) => {
+              {tag.map((e, index) => {
                 return (
                   <div>
                     <Tag text={e} key={index} />
                   </div>
                 );
               })}
+              <Tag text="....." />
             </div>
           </div>
           <div className="flex items-center text-left text-2xl font-[500]">

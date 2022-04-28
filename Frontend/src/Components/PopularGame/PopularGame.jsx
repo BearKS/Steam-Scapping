@@ -53,12 +53,12 @@ export default function PopularGame() {
     <div>
       <div className="text-white font-link font-bold text-4xl">POPULAR GAMES</div>
       <div className="flex flex-col mt-4 w-[1200px]">
-        <div className="flex">
+        <div className="flex gap-1">
           {tagList.map((e, index) => {
             return (
               <div
                 key={index}
-                className={`flex font-semibold w-[200px] h-[70px] items-center justify-center bg-gray-500 rounded-t-2xl border-x-2 border-t-2 border-[#18365C] text-white text-4xl hover:underline underline-offset-8 ${
+                className={`flex font-semibold w-[200px] h-[70px] items-center justify-center bg-gray-500 rounded-t-2xl  text-white text-4xl hover:underline underline-offset-8 ${
                   e === tab
                     ? "bg-[#C9C9C9] text-[#32415a]"
                     : "bg-[#32415a] text-[#C9C9C9]"

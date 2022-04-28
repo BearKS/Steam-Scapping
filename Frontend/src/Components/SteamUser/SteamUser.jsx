@@ -52,7 +52,7 @@ export default function SteamUser() {
                 <>Loading...</>
               )}
               {!isLoading && (
-                <>{longEnUSFormatter.format(new Date(user.timeStamp))}</>
+                <>UPDATED : {longEnUSFormatter.format(new Date(user.timeStamp))}</>
               )}
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function SteamUser() {
 
             <div className="c-base"> 
               <div className="relative text-white text-3xl font-light font-medium font-link w-[230px]">
-                Current
+                Current Player
               </div>
               <div className="relative text-white text-[43px] font-medium pb-7 font-link w-[230px]">
               {isLoading && (
@@ -89,7 +89,7 @@ export default function SteamUser() {
             {/* <div class="main">
                 <div class="circle1" style={{ animation: " circle1 7s linear infinite" }}></div>
               </div> */}
-            <div class="circulate">
+            <div class="circulate1">
               <div class="circle">
                 <div class="wave _one"></div>
                 <div class="wave _two"></div>
@@ -98,7 +98,7 @@ export default function SteamUser() {
             </div>
             <div className="c-base ">
               <div className="relative text-white text-3xl font-light font-medium font-link w-[230px]">
-                Peak
+                Peak Player
               </div>
               <div className="relative text-white text-[43px] font-medium pb-7 font-link w-[230px]">
               {isLoading && (

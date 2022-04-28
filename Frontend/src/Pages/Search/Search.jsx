@@ -101,7 +101,7 @@ function Search() {
           name="game"
           options={gamesOptions}
           onChange={handleSelectGame}
-          className="basic-multi-select w-[800px]"
+          className="basic-multi-select w-[1200px]"
           classNamePrefix="select"
         />
       </div>
@@ -111,19 +111,19 @@ function Search() {
             {showTag.length === 0 ? (
               <div className="flex flex-row justify-between font-link">
                 <h1>You haven't searched any tag</h1>
-                <h1>Sum of Playing : {allPlaying}</h1>
+                <h1>Playing : {allPlaying}</h1>
               </div>
             ) : (
               <div>
                 {gameByTag.length === 0 ? (
                   <div className="flex flex-row justify-between font-link">
                     <h1>Results : 0 game</h1>
-                    <h1>Sum of Playing : 0</h1>
+                    <h1>Playing : 0</h1>
                   </div>
                 ) : (
                   <div className="flex flex-row justify-between font-link">
                     <h1>Results : {gameByTag.length} Found</h1>
-                    <h1>Sum of Playing : {data.nowPlaying}</h1>
+                    <h1>Playing : {data.nowPlaying}</h1>
                   </div>
                 )}
               </div>
