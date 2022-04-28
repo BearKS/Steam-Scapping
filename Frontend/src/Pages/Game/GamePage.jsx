@@ -153,10 +153,10 @@ export default function GamePage(props) {
                       </div>
                     )}
                     {data.review.includes("Mixed") && (
-                      <div className="bg-orange-500">{data.review}</div>
+                      <div className="bg-orange-500 flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-3xl text-center">{data.review}</div>
                     )}
                     {data.review.includes("Negative") && (
-                      <div className="bg-red-700">{data.review}</div>
+                      <div className="bg-red-700 flex h-[100px]  text-white px-6 py-5 rounded-2xl justify-center items-center font-bold text-3xl text-center">{data.review}</div>
                     )}
                   </div>
                 </div>
