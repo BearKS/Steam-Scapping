@@ -37,8 +37,10 @@ export default function GameStats() {
         {isLoading && <>Loading...</>}
         {!isLoading && <>UPDATED : {time}</>}
       </div>
-
-      <Chart />
+<div className="bg-gray-800 px-2 h-full w-full">
+  <Chart />
+</div>
+      
     </div>
   );
 }

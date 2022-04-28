@@ -57,16 +57,16 @@ export default function Chart() {
     getPlayer();
   });
   return (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer width="90%" height="90%">
       <LineChart
         data={players}
         margin={{
-          top: 5,
-          right: 30,
-          left: 20,
+          top: 40,
+          right: 0,
+          left: 30,
           bottom: 5,
         }}
-        className="bg-gray-800"
+        
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="date" angle={5} />
