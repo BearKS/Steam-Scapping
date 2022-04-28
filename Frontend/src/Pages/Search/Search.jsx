@@ -8,7 +8,10 @@ import "./search.css";
 
 function Search() {
   const [isLoading, setIsloading] = useState(false);
-
+  const [data,setData] = useState({
+    "dayPeak" : "0",
+    "nowPlaying" : "0"
+  });
   const [showTag, setShowTag] = useState([]);
   const [gameByTag, setGameByTag] = useState();
   const [gamesOptions, setGameOptions] = useState([]);
@@ -20,6 +23,11 @@ function Search() {
       method: "GET",
     });
     let res = await data.json();
+    setData({
+      dayPeak : res.sum_dayPeak,
+      nowPlaying : res.sum_nowPlaying
+    })
+    res = res.gameData
     res = res.filter((e) => e.name !== "No data");
     setGames(res);
     addTag(res);
@@ -33,6 +41,11 @@ function Search() {
       }),
     });
     let res = await data.json();
+    setData({
+      dayPeak : res.sum_dayPeak,
+      nowPlaying : res.sum_nowPlaying
+    })
+    res = res.gameData
     res = res.filter((e) => e.name !== "No data");
     setGameByTag(res);
     setIsloading(false);
@@ -89,15 +102,15 @@ function Search() {
       </div>
       <div className="flex justify-center pt-5">
         <div className="pop-game-box">
-          <div className="text-4xl text-white pb-5">
+          <div className="text-4xl text-white pb-5 w-full">
             {showTag.length === 0 ? (
-              <div>You haven't searched any tag</div>
+              <div className="flex flex-row justify-between"><h1>You haven't searched any tag</h1><h1>Sum of Playing : {data.nowPlaying}</h1></div>
             ) : (
               <div>
                 {gameByTag.length === 0 ? (
-                  <div>Results : 0 game</div>
+                  <div className="flex flex-row justify-between"><h1>Results : 0 game</h1><h1>Sum of Playing : 0</h1></div>
                 ) : (
-                  <div>Results : {gameByTag.length} Found</div>
+                  <div className="flex flex-row justify-between"><h1>Results : {gameByTag.length} Found</h1><h1>Sum of Playing : {data.nowPlaying}</h1></div>
                 )}
               </div>
             )}
