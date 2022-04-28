@@ -69,7 +69,7 @@ export default function Chart() {
         
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="date" angle={5} />
+        <XAxis dataKey="date" angle={15} />
         <YAxis />
         <Tooltip />
         <Line

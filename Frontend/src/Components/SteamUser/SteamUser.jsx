@@ -70,7 +70,7 @@ export default function SteamUser() {
 
             <div className="c-base"> 
               <div className="relative text-white text-3xl font-light font-medium font-link w-[230px]">
-                Current Player
+                Current Players
               </div>
               <div className="relative text-white text-[43px] font-medium pb-7 font-link w-[230px]">
               {isLoading && (
@@ -98,7 +98,7 @@ export default function SteamUser() {
             </div>
             <div className="c-base ">
               <div className="relative text-white text-3xl font-light font-medium font-link w-[230px]">
-                Peak Player
+                Peak Today
               </div>
               <div className="relative text-white text-[43px] font-medium pb-7 font-link w-[230px]">
               {isLoading && (
