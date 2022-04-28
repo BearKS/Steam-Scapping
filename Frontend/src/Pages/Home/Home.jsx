@@ -8,7 +8,7 @@ import './home.css'
 export default function Home() {
   return (
     <div className='py-10 px-24 h-full'>
-      <div className="flex bg-[#18365C] justify-around gap-10">
+      <div className="flex  justify-around gap-10">
 
         <div className="flex flex-col  gap-5 w-1/3" >
           <GameStats />
