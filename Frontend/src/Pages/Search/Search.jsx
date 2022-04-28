@@ -109,19 +109,19 @@ function Search() {
         <div className="pop-game-box">
           <div className="text-4xl text-white pb-5 w-full">
             {showTag.length === 0 ? (
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between font-link">
                 <h1>You haven't searched any tag</h1>
                 <h1>Sum of Playing : {allPlaying}</h1>
               </div>
             ) : (
               <div>
                 {gameByTag.length === 0 ? (
-                  <div className="flex flex-row justify-between">
+                  <div className="flex flex-row justify-between font-link">
                     <h1>Results : 0 game</h1>
                     <h1>Sum of Playing : 0</h1>
                   </div>
                 ) : (
-                  <div className="flex flex-row justify-between">
+                  <div className="flex flex-row justify-between font-link">
                     <h1>Results : {gameByTag.length} Found</h1>
                     <h1>Sum of Playing : {data.nowPlaying}</h1>
                   </div>
@@ -166,7 +166,7 @@ function Search() {
                             />
                           </div>
                         ) : (
-                          <div>
+                          <div className="font-link">
                             {gameByTag === undefined ||
                             gameByTag === null ||
                             gameByTag.length === 0 ? (

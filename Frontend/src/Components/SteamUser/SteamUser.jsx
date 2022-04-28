@@ -39,14 +39,15 @@ export default function SteamUser() {
     <>
       <div>
         <div className="pb-3 flex flex-col">
-          <div className="title-steamuser">
+          <div className="text-white font-link font-bold  text-4xl">
+            {/* <div className="text-white font-semibold text-4xl"> */}
             Concurrent Steam Users:
           </div>
         </div>
 
         <div className="detail-steamuser">
           <div className="pb-3 flex flex-col">
-            <div className="detail-steamuser">
+            <div className="detail-steamuser font-link">
             {isLoading && (
                 <>Loading...</>
               )}
@@ -67,11 +68,11 @@ export default function SteamUser() {
               </div>
             </div>
 
-            <div className="c-base">
-              <div className="relative text-white text-3xl font-light font-medium">
+            <div className="c-base"> 
+              <div className="relative text-white text-3xl font-light font-medium font-link w-[230px]">
                 Current
               </div>
-              <div className="relative text-white text-5xl font-medium pb-7">
+              <div className="relative text-white text-[43px] font-medium pb-7 font-link w-[230px]">
               {isLoading && (
                 <>Loading...</>
               )}
@@ -84,20 +85,22 @@ export default function SteamUser() {
           </div>
 
           {/* 375885 */}
-          <div className="flex flex-col gap-2 justify-center text-center  w-[250px] h-[250px] bg-[#] rounded-full ">
-
-            <div className="circulate">
-              <div className="circle">
-                <div className="wave _one"></div>
-                <div className="wave _two"></div>
-                <div className="wave _three"></div>
+          <div className="flex flex-col gap-2 justify-center text-center w-[250px] h-[250px] bg-[#] rounded-full ">
+            {/* <div class="main">
+                <div class="circle1" style={{ animation: " circle1 7s linear infinite" }}></div>
+              </div> */}
+            <div class="circulate">
+              <div class="circle">
+                <div class="wave _one"></div>
+                <div class="wave _two"></div>
+                <div class="wave _three"></div>
               </div>
             </div>
-            <div className="c-base">
-              <div className="relative text-white text-3xl font-light font-medium">
+            <div className="c-base ">
+              <div className="relative text-white text-3xl font-light font-medium font-link w-[230px]">
                 Peak
               </div>
-              <div className="relative text-white text-5xl font-medium pb-7 ">
+              <div className="relative text-white text-[43px] font-medium pb-7 font-link w-[230px]">
               {isLoading && (
                 <>Loading...</>
               )}

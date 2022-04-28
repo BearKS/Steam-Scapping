@@ -18,10 +18,10 @@ export default function GameStats() {
 
 
   return (
-    <div className='h-[300px] w-full mb-24'>
-      <div className='title-graph'>STEAM & GAME STATS</div>
+    <div className='h-[300px] w-full mb-24 font-link'>
+      <div className='title-graph font-link'>STEAM & GAME STATS</div>
       {/* <div className='text-white text-xl pb-3'>UPDATED: 6 APRIL, 2022 @ 11.26PM</div> */}
-      <div className='updated'>UPDATED: 6 APRIL, 2022 @ 11.26PM</div>
+      <div className='updated font-link'>UPDATED: 6 APRIL, 2022 @ 11.26PM</div>
       <Chart />
     </div>
   );

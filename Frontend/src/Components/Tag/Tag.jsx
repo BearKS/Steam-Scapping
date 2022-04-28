@@ -9,5 +9,5 @@ export default function Tag(props) {
     tag = props.text;
   }
 
-  return <div className="bg-[#FEB29A] px-2 mr-3 mb-2 rounded-2xl">{tag}</div>;
+  return <div className="bg-[#FEB29A] px-2 mr-3 mb-2 rounded-2xl font-link font-bold text-orange-900">{tag}</div>;
 }

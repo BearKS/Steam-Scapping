@@ -51,8 +51,8 @@ export default function PopularGame() {
 
   return (
     <div>
-      <div className="title-popgame">POPULAR GAMES</div>
-      <div className="flex flex-col mt-8 w-[1200px]">
+      <div className="text-white font-link font-bold text-4xl">POPULAR GAMES</div>
+      <div className="flex flex-col mt-4 w-[1200px]">
         <div className="flex">
           {tagList.map((e, index) => {
             return (

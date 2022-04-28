@@ -25,7 +25,7 @@ export default function PopularGameList(props) {
       <div className="h-full w-[50px] text-3xl font-semibold flex items-center justify-center pl-1 pr-4 ">
         {props.index + 1}.
       </div>
-      <div className="h-full w-full bg-[#C9C9C9] p-3 rounded-xl hover:border-[3px] border-amber-400">
+      <div className="h-full w-full bg-[#C9C9C9] p-3 rounded-xl cursor-pointer hover:bg-[#C2C2C2] hover:shadow-lg">
         <div className="flex h-full">
           <img
             className="h-full object-cover w-[210px] rounded-xl"
