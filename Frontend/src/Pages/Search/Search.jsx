@@ -3,10 +3,13 @@ import Select from "react-select";
 
 import PopularGameList from "../../Components/PopularGameList/PopularGameList";
 
+import loading from "../../Assets/giphy.gif";
 import "./search.css";
 
 function Search() {
-  const [showTag, setShowTag] = useState();
+  const [isLoading, setIsloading] = useState(false);
+
+  const [showTag, setShowTag] = useState([]);
   const [gameByTag, setGameByTag] = useState();
   const [gamesOptions, setGameOptions] = useState([]);
   const [games, setGames] = useState();
@@ -32,6 +35,7 @@ function Search() {
     let res = await data.json();
     res = res.filter((e) => e.name !== "No data");
     setGameByTag(res);
+    setIsloading(false);
   };
 
   const addTag = (data) => {
@@ -67,6 +71,7 @@ function Search() {
   }, []);
 
   useEffect(() => {
+    setIsloading(true);
     getDataByTag();
   }, [showTag]);
 
@@ -93,11 +98,17 @@ function Search() {
         <div className="tab">
           <div className="flex flex-col gap-3 p-5">
             <div>
-              {gameByTag === undefined || gameByTag.length === 0 ? (
+              {games === undefined || games.length === 0 ? (
+                <div className="flex justify-center items-center h-full w-full">
+                  <img
+                    className="rounded-full h-1/3 "
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              ) : (
                 <div>
-                  {games === undefined || games.length === 0 ? (
-                    <div>Loading</div>
-                  ) : (
+                  {showTag.length === 0 || showTag === undefined ? (
                     <div>
                       {" "}
                       {games.map((game, index) => {
@@ -110,16 +121,38 @@ function Search() {
                         );
                       })}
                     </div>
+                  ) : (
+                    <div>
+                      {isLoading ? (
+                        <div className="flex justify-center items-center h-full w-full">
+                          <img
+                            className="rounded-full h-1/3 "
+                            src={loading}
+                            alt="Loading"
+                          />
+                        </div>
+                      ) : (
+                        <div>
+                          {gameByTag === undefined || gameByTag === null || gameByTag.length === 0 ? (
+                            <div>Not Found</div>
+                          ) : (
+                            <div>
+                              {" "}
+                              {gameByTag.map((game, index) => {
+                                return (
+                                  <PopularGameList
+                                    {...game}
+                                    index={index}
+                                    key={game.id}
+                                  />
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
                   )}
-                </div>
-              ) : (
-                <div>
-                  {" "}
-                  {gameByTag.map((game, index) => {
-                    return (
-                      <PopularGameList {...game} index={index} key={game.id} />
-                    );
-                  })}
                 </div>
               )}
             </div>
@@ -131,3 +164,4 @@ function Search() {
 }
 
 export default Search;
+
